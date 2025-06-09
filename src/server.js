@@ -10,6 +10,10 @@ export const setupServer = () => {
   app.use(pino())
     app.use(express.json())
 
+     app.get('/', (req, res) => {
+    res.status(200).json({ message: 'Welcome to the Contacts API! Try /contacts to get all contacts.' });
+  });
+
   app.get('/contacts', getAllContactsController)
 
   app.use((req, res) => {
