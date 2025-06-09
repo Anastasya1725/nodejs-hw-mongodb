@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "start": "node ./src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
